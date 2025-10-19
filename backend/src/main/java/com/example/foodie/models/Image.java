@@ -22,7 +22,7 @@ public class Image {
     private String imageName;
 
     @Builder.Default
-    private boolean isThumbnail = false;
+    private Boolean isThumbnail = false;
 
     @NotNull
     private String url;
@@ -30,4 +30,16 @@ public class Image {
     @ManyToOne
     @JoinColumn(name="image_id", referencedColumnName="id")
     private Dish dish;
+
+    private String publicId;
+
+    private String format;
+
+    private Long size;
+
+    private Integer width;
+
+    private Integer height;
+
+    private String altText;
 }
